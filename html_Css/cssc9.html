@@ -6,36 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      /* position fixed : 스크롤 다운 해도 오브젝트가 따라 내려옴 */
+      /* 레이어 상에 처음 고정된 위치에 그대로 있음 */
+      /* opacity : 투명화 */
+      /* position:static은 레이아웃이 박스를 처음 위치하는 곳에 두는 것을 말함 */
+      /* position relation  */
+      div {
+        width: 300px;
+        height: 300px;
+        color: white;
+        background-color: wheat;
+      }
+      /* position:relative를 사용하면 top,bottom,left,right 사용가능 */
+      /* element가 처음 위치한 곳을 기준잡고 이동 */
+      /* position:absolute는 가장 가까운 relative부모를 기준으로 이동시켜줌 */
+      /* relative가 없는 상태면 body가 자동으로 기준이 됨 */
+      .green {
+        background-color: teal;
+        position: relative;
+        top: -10px;
+        left: -10px;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
   </head>
-  <style>
-    body {
-      height: 1000vh;
-      margin: 50px;
-    }
-    /* position fixed : 스크롤 다운 해도 오브젝트가 따라 내려옴 */
-    /* 레이어 상에 처음 고정된 위치에 그대로 있음 */
-    /* opacity : 투명화 */
-    /* position:static은 레이아웃이 박스를 처음 위치하는 곳에 두는 것을 말함 */
-    /* position relation  */
-    div {
-      width: 300px;
-      height: 300px;
-      color: white;
-      background-color: wheat;
-    }
-    /* position:relative를 사용하면 top,bottom,left,right 사용가능 */
-    /* element가 처음 위치한 곳을 기준잡고 이동 */
-    /* position:absolute는 가장 가까운 relative부모를 기준으로 이동시켜줌 */
-    /* relative가 없는 상태면 body가 자동으로 기준이 됨 */
-    .green {
-      background-color: teal;
-      position: relative;
-      top: -10px;
-      left: -10px;
-      height: 100px;
-      width: 100px;
-    }
-  </style>
   <body>
     <div>
       <div class="green"></div>

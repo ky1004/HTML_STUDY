@@ -1,0 +1,36 @@
+<!-- Color and Variables -->
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* css에서 알아야할 컬러 시스템 3가지 */
+      /* hexadecimal color(16진수 컬러) */
+      /* rgba에서 a는 투명도를 말함 */
+      /* p {
+          color: rgb(252, 206, 0);
+          background-color: rgba(43, 255, 0, 0.8);
+        } */
+      p {
+        color: rgb(252, 206, 0);
+        background-color: var(--main--color);
+      }
+      a {
+        color: var(--main--color);
+      }
+      /* 루트는 기본적으로 모든 document의 뿌리가 된다 */
+      :root {
+        /* 컬러를 변수에 저장 */
+        /* custom property */
+        --main--color: #fcce00;
+      }
+    </style>
+  </head>
+  <body>
+    <p>So many kind of Color</p>
+    <a href="google.co.kr">go to a google</a>
+  </body>
+</html>

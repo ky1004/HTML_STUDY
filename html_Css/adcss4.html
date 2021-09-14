@@ -1,0 +1,29 @@
+<!-- animations 1 -->
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 0부터 360도 회전 */
+      @keyframes superCoinFlip {
+        from {
+          transform: rotateY(0);
+        }
+        to {
+          transform: rotateY(360deg) translateX(100px);
+        }
+      }
+      img {
+        border: 10px solid black;
+        border-radius: 50%;
+        animation: superCoinFlip 5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img/dozi.png" />
+  </body>
+</html>

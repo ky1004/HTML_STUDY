@@ -1,0 +1,35 @@
+<!-- transition 1 -->
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* transition을 줄 때는 hover아닌 쪽에 쓰는 것이다 */
+      a {
+        color: white;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 55px;
+        /* 텍스트가 사라지고 배경색이 서서히 연해지면서 텍스트가 보임 */
+        /* 마우스를 위에서 벗어나게 하면 변하기 전의 글자가 나타남 */
+        /* transition: background-color 10s ease-in-out; */
+        /* transition: background-color 10s ease-in-out, color 5s ease-in-out; */
+        transition: all 5s ease-in-out;
+      }
+      /* transition이 hover에 있는 bgc를 찾고 hover일 때 색이 변경되어 있으면
+      그 변화를 애니메이션으로 바꾼다 */
+      a:hover {
+        color: tomato;
+        background-color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Go home</a>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!-- transformations -->
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        transition: transform 5s ease-in-out;
+        /* ratateY : y축을 기준으로 일정 degree각도만큼 회전 */
+        /* 좌표에 쉼표 안넣어도 됨 */
+        /* transform: rotateY(85deg) rotateX(20deg) rotateZ(20deg); */
+        /* scaleX(), translateX(), skewX() 같은 크기조절,이동 기울이기도 가능 */
+        /* transform은 다른 box element를 변형시키진 않는다 */
+      }
+      img:hover {
+        /* transform: rotateZ(90deg) scale(0.5); */
+        /* transform: rotate3d(1, 2, 3, 80deg); */
+        transform: matrix(1, 2, 3, 4, 5, 6);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img/insta.png" />
+  </body>
+</html>
