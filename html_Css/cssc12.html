@@ -1,0 +1,52 @@
+<!-- pseudo selectors -->
+<!-- combinator -->
+
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      height: 1000vh;
+      margin: 50px;
+    }
+    /* optional은 required가 아닌 것을 가리킬 때 쓰임 */
+    input:optional {
+      border: 1px solid wheat;
+    }
+    input:required {
+      border-color: tomato;
+    }
+    /* attribute selector */
+    /* 애트리뷰트를 통해 어떤 것이든 선택하게 해줌 */
+    input[placeholder="username"] {
+      background-color: yellowgreen;
+    }
+    /*
+        *="hello"는 hello를 찾아줌, 
+        ~="hello"는 앞뒤 공백이 있는 상태에서 hello인 경우만 선택됨
+    */
+    /* F가 포함된 것 찾기 */
+    input[placeholder*="F"] {
+      background-color: chocolate;
+    }
+    /* 앞 뒤 공백이면서 Lname 포함한 것 찾기 */
+    input[placeholder~="Lname"] {
+      background-color: cornflowerblue;
+    }
+  </style>
+  <body>
+    <div>
+      <form>
+        <input type="text" placeholder="Fname" />
+        <input type="text" placeholder="d Lname" />
+        <input type="text" placeholder="username" />
+        <input type="pw" required placeholder="password" />
+      </form>
+    </div>
+  </body>
+</html>

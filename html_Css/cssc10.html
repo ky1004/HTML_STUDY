@@ -1,0 +1,64 @@
+<!-- pseudo selectors -->
+<!-- 좀 더 세부적으로 element를 선택해주는 기능 -->
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      height: 1000vh;
+      margin: 50px;
+    }
+    div {
+      width: 150px;
+      height: 150px;
+      background-color: wheat;
+      position: relative;
+    }
+    /* class나 id를 만드는 것보다 훨씬 좋은 방법 */
+    /* div:first-child {
+      background-color: tomato;
+    }
+    div:last-child {
+      background-color: teal;
+    } */
+
+    span {
+      background-color: tomato;
+      color: white;
+    }
+    /* (n)번째 선택 */
+    /* span:nth-child(2),
+    span:nth-child(4) {
+      background-color: teal;
+    } */
+    /* even은 짝수번 째의 span을 원하는 대로 만들어줌 */
+    /* odd는 홀수번 째 */
+    /* span:nth-child(even) {
+      background-color: yellowgreen;
+    } */
+    /* 3번째부터 시작 */
+    span:nth-child(n + 3) {
+      background-color: yellowgreen;
+    }
+  </style>
+  <body>
+    <!-- <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div> -->
+
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+  </body>
+</html>

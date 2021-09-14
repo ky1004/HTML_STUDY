@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- html에서 제일 많이 볼 태그는 div -->
+    <!-- 의미론적으로 봤을 때 document에는 기능은 있지만 아무런 값도 없는 태그이자 박스다 -->
+    <!-- div,division(분할, 구분, 경계선) 박스라고 생각해도 됨 -->
+    <!-- 기본적으로 box들은 양옆에 서로 붙어있을 수 없다 -->
+    <div>
+      <label for="website">WebSite</label>
+      <input id="website" required placeholder="Name" type="date" />
+      <label for="website">WebSite</label>
+      <input id="website" required placeholder="Name" type="url" />
+      <input type="submit" value="Create Account" />
+    </div>
+    <div>
+      <label for="website">WebSite</label>
+      <input id="website" required placeholder="Name" type="date" />
+      <label for="website">WebSite</label>
+      <input id="website" required placeholder="Name" type="url" />
+      <input type="submit" value="Create Account" />
+    </div>
+    <!-- Content Sectioning(콘텐츠 구획) -->
+    <!-- 문서를 보기만 해도 그 의미를 짐작 할 수 있는 것을 semantic이라고 한다 -->
+    <!-- div처럼 사용 가능하면서 코드 자체로 의미가 부여된 태그 : header, main, footer -->
+    <header>
+      <!-- head와 header는 다른 것이다 -->
+      <!-- head는 보이지 않는 태그 header는 body안에 포함되있는 것이다 -->
+      <h1>This Title</h1>
+      <!-- div로 작성하기보다 이렇게 보기만 해도 유추할 수 있는 태그를 사용하는 것이 좋다 -->
+    </header>
+    <!-- main : 주 내용 태그 -->
+    <main>
+      <p>Hi, It is Main</p>
+      <p>Hi, It is Main</p>
+      <p>Hi, It is Main</p>
+      <p>Hi, It is Main</p>
+    </main>
+    <!-- footer : 꼬릿말 태그 -->
+    <footer>test : 2021. 09. 04</footer>
+    <!-- 위처럼 div로 작성하기보다 semantic태그를 잘 사용하자, document와 content를 명확하게 묘사하는게 중요 -->
+    <!-- span은 짧은 text를 위한 태그 -->
+    <!-- 긴 문단 텍스트는 p태그로 -->
+    <span> Hello! </span>
+  </body>
+</html>

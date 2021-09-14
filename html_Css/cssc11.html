@@ -1,0 +1,55 @@
+<!-- pseudo selectors -->
+<!-- combinator -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      height: 1000vh;
+      margin: 50px;
+    }
+    span {
+      color: tomato;
+      background-color: yellowgreen;
+      padding: 5px;
+      border-radius: 10px;
+    }
+    /* p안에 있는 span을 가리킬 수 있다 */
+    p span {
+      color: white;
+    }
+    /* div>span은 div의 바로 밑자식만을 가리킨다 */
+    /* div > span {
+      text-decoration: underline;
+    } */
+    /* p다음으로 오는 span을 찾아라 (+)는 다음이라는 기능 */
+    /* p + span {
+      background-color: violet;
+      color: green;
+      text-decoration: underline;
+    } */
+    /* p다음으로 span이 바로 뒤에 오지 않을 때 */
+    /* ~을 사용하여 해결가능 */
+    p ~ span {
+      background-color: violet;
+      color: green;
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <div>
+      <span>hello</span>
+      <p>
+        Lorem ipsum dolor sit amet bla bla Lorem ipsum dolor sit amet bla bla
+        Lorem ipsum dolor sit amet bla bla Lorem ipsum dolor sit amet bla bla.
+        <span>inside</span>
+      </p>
+      <span>Bye</span>
+    </div>
+  </body>
+</html>

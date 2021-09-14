@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <!-- label을 사용할 때 for과 id의 attribute값이 동일해야한다 -->
+      <!-- id는 body안에 어떤 태그든 넣을 수 있는 attribute다 -->
+      <!-- body안에 어떤 태그에도 id를 넣을 수 있는 이유는 고유식별자(unique identifier)이기 때문이다  -->
+      <!-- element당 하나의 id만 가질 수 있고 id의 값은 고유해야한다-->
+      <label for="profile">Profile Photo</label>
+      <input id="profile" type="file" accept=".png,.pdf" />
+      <br />
+      <!-- attribute안에 띄어쓰기는 하지 말것 -->
+      <!-- first name을 클릭하면 name input에 입력커서가 자동 활성화됨 -->
+      <label for="first-name">First Name</label>
+      <input id="first-name" required placeholder="Name" type="text" />
+      <!-- url을 입력해달라고 하는 메세지를 출력 -->
+      <!-- type을 email로 하면 이메일을 입력해달라고 하는 메세지를 출력해줌 -->
+      <label for="website">WebSite</label>
+      <input id="website" required placeholder="Name" type="url" />
+      <input type="submit" value="Create Account" />
+      <br />
+      <!-- range : 조절바 컨트롤로 입력하게 해줌-->
+      <label for="range">Range</label>
+      <input id="range" required placeholder="Name" type="range" />
+
+      <label for="dstart">Date</label>
+      <input id="dstart" required placeholder="Name" type="date" />
+
+      <label for="color">what is your color?</label>
+      <input id="color" required placeholder="color" type="color" />
+    </form>
+  </body>
+</html>

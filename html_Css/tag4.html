@@ -1,0 +1,35 @@
+<!-- mdn에서 form에 대해 찾아보고 공부해보자 -->
+<!-- form안에 form의 양식을 만들어줘야 함 -->
+<!-- input태그가 가장 중요 (모든 웹사이트는 input을 가지고있다)-->
+
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- <tagname required attrname="attrvalue">contents</tagname> -->
+    <form>
+      <!-- type = "유형" -->
+      <!-- type유형에는 color, password 등이 있다 -->
+      <!-- placeholder는 input이 가지는 또 다른 attribute이다 -->
+      <!-- placeholder의 내용을 input칸의 커서를 두기 전 텍스트로 사용된다 -->
+      <input required placeholder="Name" type="text" />
+      <!-- disabled 적용시 입력을 할 수 없는 상태가 된다 -->
+      <!-- required는 빈칸이 있을 시에 입력하라는 문구를 나타낸다, form을 validation(검증)할 수 있음 -->
+      <input required placeholder="Last Name" disabled type="text" />
+      <input required placeholder="UserName" type="text" />
+      <!-- minlength : 길이가 최소 10글자 이상 되어야 한다는 attribute -->
+      <input required placeholder="Password" minlength="10" type="password" />
+      <!-- value값이 버튼에 출력되는 이름 -->
+      <input type="submit" value="Create Account" /> <br />
+      <!-- file type의 accept는 설정한 해당 파일유형만을 받아들이게 할 수 있음 -->
+      <input type="file" accept=".png" /> <br />
+      <!-- 모든 이미지 파일과 pdf만을 받아들이겠다는 뜻 -->
+      <input type="file" accept="image/*,.pdf" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!-- inline, inline-block -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 20px;
+    }
+    div {
+      /* inline-block은 별로임 (구형) */
+      /* 단점 : default값으로 주어짐, 빈공간이 있음, 정해진 형식이 없음 */
+      /* inline-block은 Responsive Design(반응형 디자인)을 지원하지 않는다 */
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: teal;
+    }
+  </style>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
+</html>

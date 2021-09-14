@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      background-color: gainsboro;
+    }
+    h1 {
+      text-align: center;
+      margin: 40px;
+    }
+    span {
+      margin: 8px;
+      font-weight: bold;
+    }
+    main > div {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    main > div > div {
+      width: 180px;
+      height: 320px;
+      margin: 10px;
+      border: solid 3px white;
+    }
+    /* 1. 색상부분 Pseudo Selector 사용 */
+    main > div:nth-child(1) > div:nth-child(1) {
+      background-color: tomato;
+    }
+    main > div:nth-child(1) > div:nth-child(2) {
+      background-color: teal;
+    }
+    main > div:nth-child(2) > div:nth-child(1) {
+      background-color: burlywood;
+    }
+    main > div:nth-child(2) > div:nth-child(2) {
+      background-color: thistle;
+    }
+    /* 2. Position 사용 */
+    .white {
+      width: 180px;
+      height: 120px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      top: 20px;
+    }
+    .s1 {
+      font-size: 22px;
+    }
+  </style>
+  <body>
+    <!-- happingCode_210913 -->
+    <!-- 1. 4개의 박스 색상 부분은 Pseudo Selector를 사용 -->
+    <!-- 2. 색상이름과 색상코드가 적힌 박스 위치는 Position 속성 사용 -->
+    <header><h1>The Best Colors</h1></header>
+    <main>
+      <!-- 첫번째 상자 -->
+      <div>
+        <div>
+          <!-- 1.1 -->
+          <div class="white">
+            <span class="s1">Tomato</span>
+            <span>#FF6347</span>
+          </div>
+        </div>
+        <div>
+          <!-- 1.2 -->
+          <div class="white">
+            <span class="s1">Teal</span>
+            <span>#008080</span>
+          </div>
+        </div>
+      </div>
+      <!-- 두번째 상자 -->
+      <div>
+        <div>
+          <!-- 2.1 -->
+          <div class="white">
+            <span class="s1">Burlywood</span>
+            <span>#DEB887</span>
+          </div>
+        </div>
+        <div>
+          <!-- 2.2 -->
+          <div class="white">
+            <span class="s1">Thistle</span>
+            <span>#D7BFD7</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

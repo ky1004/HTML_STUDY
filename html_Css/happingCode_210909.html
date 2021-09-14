@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+  </head>
+
+  <body>
+    <form>
+      <!-- HappingCode_210909 -->
+      <!-- semantic tag 꼭 사용하기 -->
+
+      <!-- Requirements  -->
+      <!-- 1.label tag, 2.id attribute, 3.all required, 4.pw min 10 -->
+      <header>
+        <h1>Create An Account</h1>
+      </header>
+      <br />
+      <!-- placeholder도 사용 -->
+      <main>
+        <div>
+          <label for="fname">First Name</label>
+          <input id="fname" required placeholder="First Name" type="text" />
+        </div>
+        <div>
+          <label for="lname">Last Name</label>
+          <input id="lname" required placeholder="Last Name" type="text" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" required placeholder="Email" type="email" />
+        </div>
+        <div>
+          <label for="uname">Username</label>
+          <input id="uname" required placeholder="Username" type="text" />
+        </div>
+        <div>
+          <!-- minlength를 통해 password 최소 요구자리 설정 -->
+          <label for="pw">Password</label>
+          <input
+            id="pw"
+            required
+            placeholder="Password"
+            minlength="10"
+            type="password"
+          />
+        </div>
+        <div>
+          <label for="brdate">Birth date</label>
+          <input id="brdate" required placeholder="Birth date" type="date" />
+        </div>
+      </main>
+      <footer>
+        <div>
+          <label for="range">How happy are you?</label>
+          <input
+            id="range"
+            required
+            placeholder="range"
+            type="range"
+            list="tickmarks"
+          />
+          <!-- 10프로 마다 마크 표시 -->
+          <datalist id="tickmarks">
+            <option value="0"></option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="color">What is your fav.color?</label>
+          <input id="color" required placeholder="color" type="color" />
+        </div>
+        <div>
+          <input type="submit" value="Create Account" />
+        </div>
+      </footer>
+    </form>
+  </body>
+</html>

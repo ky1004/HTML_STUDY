@@ -1,0 +1,57 @@
+<!-- border -->
+<!-- 다른 종류의 border는 못생겨서 보통 한종류의 border를 사용 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        /* 별은 전체를 뜻한다 */
+        border: 2px dashed black;
+      }
+      html {
+        background-color: tomato;
+      }
+      body {
+        margin: 20px;
+        padding: 20px;
+        background-color: thistle;
+      }
+      div {
+        height: 150px;
+        padding: 20px;
+        border: 2px solid black;
+      }
+      #first {
+        background-color: red;
+        width: 150px;
+        height: 150px;
+      }
+      #second {
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+      }
+      #third {
+        background-color: green;
+        width: 50px;
+        height: 50px;
+      }
+      span {
+        border-style: dotted;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="first">
+      <div id="second">
+        <div id="third">
+          <span>hello</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

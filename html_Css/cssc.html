@@ -1,0 +1,42 @@
+<!-- css와 html을 같은 파일에 두는 방법과 외부에서 불러들여오는 방법이 있다 -->
+<!-- html에서 분리된 파일을 만드는 것이 더 좋은 방법이다 (다른 페이지에 다양하게 사용할 수 있기 때문) -->
+<!DOCTYPE html>
+  <head>
+    <title>css</title>
+    <!-- css파일을 링크한다 -->
+    <!-- CSS파일을 include하는 것 (external CSS) -->
+    <link href="styles.css" rel="stylesheet" />
+    <!-- style태그는 head안에 있어야한다 -->
+    <!-- 이 안에 css코드를 넣는다 (inline CSS)-->
+    <style>
+      div {
+        height: 150px;
+        width: 150px;
+        background-color:tomato;
+      }
+
+    </style>
+    <!-- CSS는 cascading, 위에서 아래로 차례로 적용되기 때문에
+    맨 마지막에 있는 코드가 가장 마지막에 적용된다 (코드 순서가 결과에 영향) -->
+  </head>
+  <body>
+    <!-- div는 옆에 다른 요소가 올 수 없는 block이다 -->
+    <div></div> 
+    <div></div>
+    <div></div>
+    <!-- inline이란 같은 라인에 올 수 있는 것을 말한다 -->
+    <!-- 글(span), 그림(img), 링크(a) 등이 inline에 속한다 -->
+    <span>hello</span>
+    <span>hello</span>
+    <address>address isn't inline</address>
+    <span>hello</span>
+    <!-- #은 빈 링크 -->
+    <a href="#">link</a>
+    <code>code</code>
+    <a href="#">link</a>
+    <a href="#">link</a>
+    <img src="img/rarasmile.png" />
+    <span>hello</span>
+
+  </body>
+</html>
