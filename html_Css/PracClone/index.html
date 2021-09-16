@@ -1,0 +1,61 @@
+<!-- 대부분의 웹서버는 디폴트로 index.html을 찾는다 -->
+<!-- 영어에서 index는 첫번째라는 의미이기도 하다 -->
+
+<!-- 단축키 -->
+<!-- !느낌표만 쓰면 바로 html을 출력해줌 -->
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <!-- link:css라고 치면 작성해야 할 양식이 다 나온다 -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to KokoaTalk</title>
+  </head>
+  <body>
+    <!-- BEM(Block Element Modifier) -->
+    <!-- 직관적으로 정보 전달하기 좋은 BEM규칙을 따르자 -->
+    <!-- 단점은 클래스가 엄청 커질 수 있다는 점 -->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!-- To do: Wifi Icon -->
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>80%</span>
+        <!-- Bettery Icon -->
+        <i class="fas fa-battery-full"></i>
+        <!-- Lightning Icon -->
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header__text">
+        If you have a Kokoa Account, log in with your email or phone number.
+      </p>
+    </header>
+
+    <form id="login-form">
+      <input type="text" placeholder="Email or phone number" />
+      <input type="password" placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <!-- <input type="submit" value="Sign Up" /> -->
+      <a href="#">Find Kakao Account or Password</a>
+    </form>
+
+    <!-- 스크립트는 항상 body tag를 닫기 직전에! 마지막에 있어야한다 -->
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 리셋 css는 대부분의 태그에 margin:0, padding:0, border:0 등을 가진 css파일을 말함 -->
+  </body>
+</html>
