@@ -42,9 +42,14 @@
       </p>
     </header>
 
-    <form id="login-form">
-      <input type="text" placeholder="Email or phone number" />
-      <input type="password" placeholder="Password" />
+    <!-- action은 해당 페이지로 보낼 수 있다 -->
+    <!-- method는 두가지 방식을 사용할 수 있다 - Post방식과 Get방식 -->
+    <!-- 이 프로젝트에서 Post방식(백엔드)은 사용할 수 없으니 Get방식으로 간다 -->
+    <!-- Get방식은 보안에 굉장히 취약하다, username이랑 pw를 get방식으로 보내면 절대 안된다 -->
+    <!-- url에 포함되어도 상관없는 정보들을 get방식으로 보내는 것이다 -->
+    <form action="friends.html" method="get" id="login-form">
+      <input name="username" type="text" placeholder="Email or phone number" />
+      <input name="password" type="password" placeholder="Password" />
       <input type="submit" value="Log In" />
       <!-- <input type="submit" value="Sign Up" /> -->
       <a href="#">Find Kakao Account or Password</a>
