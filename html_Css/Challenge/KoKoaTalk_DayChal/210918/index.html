@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- HappingCode_210918 -->
+
+    <main>
+      <!-- 첫번째 창 -->
+      <div class="playlist-screen">
+        <div class="playlist-screen__top-bar">
+          <i class="fas fa-arrow-left"></i>
+          <i class="fas fa-search"></i>
+        </div>
+
+        <div class="playlist-screen__singer">
+          <img
+            class="playlist-screen__singerImg"
+            src="https://newsimg.hankookilbo.com/cms/articlerelease/2021/05/04/61193878-8f13-4ee2-b93e-62fd502bf4db.jpg"
+          />
+        </div>
+
+        <div class="playlist-screen__singer-name">
+          <span class="playlist-screen__singer-name__text"
+            >Lee Mujin, Singer</span
+          >
+          <span class="playlist-screen__singer-name__genre"
+            >Ballad, rock/metal</span
+          >
+        </div>
+
+        <div class="playlist-screen__btn">
+          <div class="playlist-screen__btn__shuffle">
+            <span class="playlist-screen__btn__shuffle-text">shuffle</span>
+          </div>
+          <div class="playlist-screen__btn__love">
+            <i class="fas fa-heart"></i>
+            <div>381,249</div>
+          </div>
+        </div>
+
+        <div class="playlist-screen__musiclist">
+          <div class="playlist-screen__musiclist-box">
+            <div class="mid">
+              <img
+                class="playlist-screen__musiclist-img"
+                src="https://cdnimg.melon.co.kr/cm2/album/images/106/54/607/10654607_20210716170006_500.jpg?9611b5d04c84ebbe067ba48d68892821"
+              />
+              <div class="playlist-screen__musiclist-namebox">
+                <span class="playlist-screen__person-name"
+                  >Lee Mujin, Singer</span
+                >
+                <span class="playlist-screen__music-name">Homework song</span>
+              </div>
+            </div>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          <div class="playlist-screen__musiclist-box">
+            <div class="mid">
+              <img
+                class="playlist-screen__musiclist-img"
+                src="https://news.nateimg.co.kr/orgImg/hm/2021/09/15/202109150911070133958_20210915091121_01.jpg"
+              />
+              <div class="playlist-screen__musiclist-namebox">
+                <span class="playlist-screen__person-name"
+                  >Lee Mujin, Singer</span
+                >
+                <span class="playlist-screen__music-name">Fall in Fall</span>
+              </div>
+            </div>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          <div class="playlist-screen__musiclist-box">
+            <div class="mid">
+              <img
+                class="playlist-screen__musiclist-img"
+                src="https://cdnimg.melon.co.kr/cm2/album/images/106/07/796/10607796_20210513201807_500.jpg?cb1d50410b364ec4c2a4848adbf5eb68"
+              />
+              <div class="playlist-screen__musiclist-namebox">
+                <span class="playlist-screen__person-name"
+                  >Lee Mujin, Singer</span
+                >
+                <span class="playlist-screen__music-name">Traffic light</span>
+              </div>
+            </div>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          <div class="playlist-screen__musiclist-box">
+            <div class="mid">
+              <img
+                class="playlist-screen__musiclist-img"
+                src="https://image.bugsm.co.kr/album/images/500/40467/4046720.jpg"
+              />
+              <div class="playlist-screen__musiclist-namebox">
+                <span class="playlist-screen__person-name"
+                  >Lee Mujin, Singer</span
+                >
+                <span class="playlist-screen__music-name"
+                  >Pupel of Chimney Town</span
+                >
+              </div>
+            </div>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+
+        <div id="Playing">
+          <div class="playlist-screen__playing">
+            <div class="playlist-screen__playing-Box">
+              <span class="playlist-screen__playing-name"
+                >Lee Mujin, Singer</span
+              >
+              <span class="playlist-screen__playing-music">Homework song</span>
+            </div>
+            <div class="playlist-screen__btn">
+              <i class="fas fa-step-backward"></i>
+              <i class="fas fa-pause"></i>
+              <i class="fas fa-step-forward"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 두번째 창 -->
+      <div class="currentPlay-screen">
+        <!-- top bar -->
+        <div class="playlist-screen__top-bar">
+          <i class="fas fa-arrow-left"></i>
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+
+        <!-- CurrentMusic img-->
+        <div class="currentPlay-screen__img-Box">
+          <img
+            class="currentPlay-screen__img"
+            src="https://cdnimg.melon.co.kr/cm2/album/images/106/54/607/10654607_20210716170006_500.jpg?9611b5d04c84ebbe067ba48d68892821"
+          />
+        </div>
+
+        <!-- Music NameBox -->
+        <div class="currentPlay-screen__musicName">
+          <span class="musicName-music">Homework song</span>
+          <span class="musicName-name">Lee Mujin, Singer</span>
+        </div>
+
+        <!-- playing bar -->
+        <div class="currentPlay-screen__playBar">
+          <div class="currentPlay-screen__playBar-music">
+            <span class="currentPlay-screen__time time1">1:48</span>
+            <span class="currentPlay-screen__time time2">3:53</span>
+          </div>
+          <div class="currentPlay-screen__playBar2-music"></div>
+          <div class="currentPlay-screen__playBar-circle"></div>
+        </div>
+
+        <!-- button -->
+        <div class="currentPlay-screen__btn">
+          <i class="fas fa-retweet fa-lg"></i>
+          <i class="fas fa-step-backward fa-2x"></i>
+          <i class="fas fa-play-circle fa-4x"></i>
+          <i class="fas fa-step-forward fa-2x"></i>
+          <i class="fas fa-random fa-lg"></i>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
