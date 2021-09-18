@@ -1,0 +1,27 @@
+/* @import "reSet.css"; */
+@import "topBar210916.css";
+@import "searchBar210916.css";
+@import "selectBook210916.css";
+@import "AnotherBooks210916.css";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+h2 {
+  margin: 10px 5px;
+  border-bottom: 2px solid rgba(255, 202, 56, 0.8);
+}
+
+.rcmBook {
+  display: flex;
+  justify-content: center;
+}
+.rcmBook__img {
+  width: 100px;
+}
+.rcmBook__title {
+  font-size: 25px;
+  font-weight: bold;
+}

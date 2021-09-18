@@ -1,0 +1,51 @@
+.selectBook {
+  display: flex;
+}
+.selectBook__img {
+  height: 250px;
+}
+.selectBook__textBox {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.selectBook__textBox > span:first-child {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.selectBook__textBox > span:last-child {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 8px;
+}
+.selectBook__bb1 {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+.selectBook__btn1 {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 20%;
+}
+.selectBook__bb2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.selectBook__btn2 {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(255, 202, 56);
+}
+.selectBook__btn3 {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  width: 140px;
+  height: 50px;
+  border-radius: 10%;
+}

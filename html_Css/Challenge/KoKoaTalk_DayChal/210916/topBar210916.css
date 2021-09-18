@@ -1,0 +1,17 @@
+.top-bar__cnt > span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin: 10px 0px;
+  background-color: rgb(255, 202, 56);
+}
+.top-bar:first-child,
+.top-bar:last-child {
+  padding: 10px;
+}

@@ -9,6 +9,7 @@
     <title>Friends - KokoaClone</title>
   </head>
   <body>
+    <!-- 상태 바 -->
     <div class="status-bar">
       <div class="status-bar__column">
         <span>No Service</span>
@@ -27,10 +28,25 @@
       </div>
     </div>
 
+    <!-- 화면 헤더 -->
+    <header class="screen-header">
+      <h1 class="screen-header__title">Friends</h1>
+      <div class="screen-header__icons">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-music fa-lg"></i></span>
+        <span><i class="fas fa-cog fa-lg"></i></span>
+      </div>
+    </header>
+
+    <!-- Friends Names Display -->
+    <a id="friends-display-link">
+      <i class="fas fa-info-circle"></i> Friends Names Display
+      <i class="fas fa-chevron-right fa-xs"></i>
+    </a>
+
     <!-- navigation -->
     <!-- 검색엔진 구글도 navigation을 찾아서
     ul의 li안에 있는 link를 가져오게끔 설정되어 있음 -->
-
     <!-- nav>ul>li*4>a  -->
     <nav class="nav">
       <ul class="nav__list">
@@ -40,7 +56,10 @@
           ></a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="#"><i class="far fa-comment fa-2x"></i></a>
+          <a class="nav__link" href="#">
+            <span class="nav__notification">1</span>
+            <i class="far fa-comment fa-2x"></i
+          ></a>
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="#"><i class="fas fa-search fa-2x"></i></a>

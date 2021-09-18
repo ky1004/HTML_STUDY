@@ -1,0 +1,16 @@
+.anotherBooks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.anotherBooks__box {
+  margin: 8px;
+}
+.anotherBooks__img {
+  border: 1px solid rgba(65, 65, 65, 0.8);
+  width: 100px;
+}
+.anotherBooks__star {
+  border: 1px solid rgba(65, 65, 65, 0.2);
+  text-align: center;
+}
