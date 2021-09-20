@@ -1,0 +1,164 @@
+#chat-screen {
+  background-color: #abc1d1;
+  /* 스크롤 할 수 있게 높이를 크게 잡는다 */
+  height: 11000vh;
+  /* padding-top: 70px; */
+}
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #abc1d1;
+}
+#chat-screen .status-bar {
+  /* div의 순서를 결정 */
+  /* absolute, fixed position에서 사용 */
+  z-index: 3;
+}
+#chat-screen .alt-header {
+  /* 상단 간격 */
+  top: 10px;
+  z-index: 2; /* z-index의 기본값은 0 */
+}
+.main-chat {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chats__timestamp {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25%;
+  margin-right: 10px;
+  background-color: white;
+}
+.message__author {
+  opacity: 0.8;
+  font-size: 13px;
+  margin-bottom: 8px;
+  display: block;
+}
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+.message__bubble {
+  background-color: white;
+  padding: 13px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-top-left-radius: 0px; /*말풍선 모양을 만들기 위함*/
+  margin-right: 5px;
+}
+.message__time {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+/* Reverse 2. */
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+/* Reverse 1. */
+/* .message-row--own .message__bubble {
+  order: 1;
+}
+
+.message-row--own .message__time {
+  margin-right: 5px;
+  order: 0;
+} */
+
+/* another things */
+/* .chat-screen__fixed {
+  background-color: #abc1d1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+} */
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+}
+
+/* A : 그래서 먼저 column에 width를 주어야 한다 */
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+.reply i {
+  opacity: 0.6;
+}
+
+.reply input {
+  padding: 6px;
+  height: 30px;
+  /* Q: input이 column안에 있어서 작동하지 않음, column은 width를 가지고 있지 않음 */
+  width: 100%; /* 컬럼에서 width준 후에 작동 */
+  border: var(--line-border);
+  border-radius: 20px;
+}
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+.reply__column:last-child > i {
+  right: 40px;
+  top: 15px;
+}
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+.reply__column button {
+  opacity: 1;
+}
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}

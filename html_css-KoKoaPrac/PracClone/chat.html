@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat - KokoaClone</title>
+  </head>
+  <body id="chat-screen">
+    <!-- another things -->
+    <!-- <div class="chat-screen__fixed">
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <span>No Service</span>
+          <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+          <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+          <span>80%</span>
+          <i class="fas fa-battery-full"></i>
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
+      <header class="alt-header">
+        <div class="alt-header__column">
+          <a href="more.html"> <i class="fas fa-angle-left fa-2x"></i></a>
+        </div>
+        <div class="alt-header__column">
+          <h1 class="alt-header__title">KokoaTalk</h1>
+        </div>
+        <div class="alt-header__column">
+          <span><i class="fas fa-search fa-lg"></i></span>
+          <span><i class="fas fa-bars fa-lg"></i></span>
+        </div>
+      </header>
+    </div> -->
+
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!-- To do: Wifi Icon -->
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>80%</span>
+        <!-- Bettery Icon -->
+        <i class="fas fa-battery-full"></i>
+        <!-- Lightning Icon -->
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="chats.html"> <i class="fas fa-angle-left fa-2x"></i></a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">KokoaTalk</h1>
+      </div>
+      <div class="alt-header__column">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-bars fa-lg"></i></span>
+      </div>
+    </header>
+
+    <main class="main-screen main-chat">
+      <div class="chats__timestamp">Tuesday, Sep 21, 2021</div>
+
+      <div class="message-row">
+        <img src="https://nomadcoders.co/heros/kokoaClone.svg" />
+        <div class="message-row__content">
+          <span class="message__author">KokoaTalk</span>
+          <div class="message__info">
+            <span class="message__bubble">
+              Please Check My Kokoa Account Info
+            </span>
+            <span class="message__time">11:11</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble"> What can I ask for? </span>
+            <span class="message__time">11:15</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="reply">
+      <div class="reply__column">
+        <i class="far fa-plus-square fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" placeholder="write a message..." />
+        <i class="far fa-laugh-squint fa-lg"></i>
+        <button>
+          <i class="fas fa-arrow-up fa-lg"></i>
+        </button>
+      </div>
+    </form>
+
+    <!-- 스크립트는 항상 body tag를 닫기 직전에! 마지막에 있어야한다 -->
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

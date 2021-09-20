@@ -10,6 +10,7 @@
 /* justify-content대신 컨테이너 하나를 중심에 놓는 css hack(기술) */
 .status-bar__column {
   width: 33%;
+  margin-right: 10px;
 }
 .status-bar__column:first-child span {
   margin-right: 5px;

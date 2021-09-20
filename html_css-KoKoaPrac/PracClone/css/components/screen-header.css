@@ -4,12 +4,25 @@
   align-items: center;
   /* padding: 25px; */
   padding: var(--horizontal-space);
+  margin-bottom: 15px;
 }
 
 .screen-header__title {
   font-size: 28px;
   font-weight: 600;
 }
+.screen-header__icons {
+  position: relative;
+}
 .screen-header__icons span {
   margin-left: 25px;
+}
+.screen-header__dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: tomato;
+  bottom: 20px;
+  left: 100px;
 }
