@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            transition-property: 변하게 하고자 하는 속성
+            transition-duration: 애니메이션 작동시간 
+            transition-delay: 시작 딜레이 시간
+            transition-timing-function: 애니메이션 패턴변화 적용
+            
+            transition: 속성 작동시간 패턴변화 지연;
+            transition: 속성 시간;
+
+            cursor: pointer; 클릭 효과
+        */
+        
+        .btn{
+            width: 300px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            background-color: rgb(156, 212, 255);
+            padding: 20px;
+            cursor: pointer;
+            margin: 4px;
+        }
+        .btn span{
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            transition: 0.5;
+        }
+
+        .btn span::after{
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -80px;
+            transition: 0.5s;
+        }
+        .btn:hover span{
+            padding-right: 25px;
+        }
+        .btn:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="exBox">
+        <button class="btn">
+            <span>Click</span>
+        </button>
+    </div>
+
+</body>
+</html>
