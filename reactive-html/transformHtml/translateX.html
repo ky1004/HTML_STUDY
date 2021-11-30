@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSlide</title>
+    <style>
+        /* 
+        transform:translateX(); - 라벨 클릭시 input체크되면서 화면전환 효과
+        left - @keyframes로 진행도에 따라 화면전환되도록 사용
+        */
+
+        /* reset */
+        *{ margin: 0; padding: 0; box-sizing: border-box;
+        }
+        ul, li { list-style: none; }
+
+        [name = "slide"] { display: none; }
+        .slidebox { max-width: 1000px; width: 100%; margin:0 auto; }
+        .slidebox img { max-width: 100%; }
+        .slidebox .slidelist {
+            white-space: nowrap;
+            font-size: 0;
+            overflow: hidden;
+        }
+        .slidebox .slideitem{
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            transition: all .35s;
+        }
+        .slidebox .slideitem label{
+            position:absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        label.left{
+            left: 20px;
+            background-color: #5f5f5f;
+            background-image: url(./img/arrow-left-s-line.png);
+            background-position: center center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+        label.right{
+            right: 20px;
+            background-color: #5f5f5f;
+            background-image: url(./img/arrow-right-s-line.png);
+            background-position: center center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+        [id="slide01"]:checked ~ .slidelist .slideitem {transform: translateX(0); animation:slide01 20s infinite}
+        [id="slide02"]:checked ~ .slidelist .slideitem {transform: translateX(-100%);}
+        [id="slide03"]:checked ~ .slidelist .slideitem {transform: translateX(-200%);}
+        [id="slide04"]:checked ~ .slidelist .slideitem {transform: translateX(-300%);}
+
+        @keyframes slide01{
+            0% { left: 0%; }
+            23% { left: 0%; }
+            25% { left: -100%; }
+            48% { left: -100%; }
+            50% { left: -200%; }
+            73% { left: -200%; }
+            75% { left: -300%; }
+            98% { left: -300%; }
+            100% { left: 0%; }
+        }
+        @keyframes slide02{
+            0% { left: 0%; }
+            23% { left: 0%; }
+            25% { left: -100%; }
+            48% { left: -100%; }
+            50% { left: -200%; }
+            73% { left: -200%; }
+            75% { left: 100%; }
+            98% { left: 100%; }
+            100% { left: 0%; }
+        }
+        @keyframes slide03{
+            0% { left: 0%; }
+            23% { left: 0%; }
+            25% { left: -100%; }
+            48% { left: -100%; }
+            50% { left: -200%; }
+            73% { left: -200%; }
+            75% { left: 100%; }
+            98% { left: 100%; }
+            100% { left: 0%; }
+        }
+        @keyframes slide04{
+            0% { left: 0%; }
+            23% { left: 0%; }
+            25% { left: -100%; }
+            48% { left: -100%; }
+            50% { left: -200%; }
+            73% { left: -200%; }
+            75% { left: 100%; }
+            98% { left: 100%; }
+            100% { left: 0%; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slidebox" style="width:500px;">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <input type="radio" name="slide" id="slide04">
+        <ul class="slidelist">
+            <li class="slideitem">
+                <div>
+                    <label for="slide04" class="left"></label>
+                    <label for="slide02" class="right"></label>
+                    <a><img src="https://cdn.pixabay.com/photo/2020/06/13/18/37/forest-5295361__340.jpg"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for="slide01" class="left"></label>
+                    <label for="slide03" class="right"></label>
+                    <a><img src="https://cdn.pixabay.com/photo/2019/09/12/19/50/boats-4472502__340.jpg"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for="slide02" class="left"></label>
+                    <label for="slide04" class="right"></label>
+                    <a><img src="https://cdn.pixabay.com/photo/2021/11/25/09/27/building-6822998__340.jpg"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for="slide03" class="left"></label>
+                    <label for="slide01" class="right"></label>
+                    <a><img src="https://cdn.pixabay.com/photo/2021/11/26/20/44/lantern-6826687__340.jpg"></a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</body>
+</html>
