@@ -1,0 +1,57 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    box-sizing: border-box;
+}
+
+/* 사이드바 시작  */
+.sidebar {
+    position: fixed;
+    background: #fff;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0px 1px 10px #aaa;
+}
+/* 
+text-transform 종류
+uppercase - 모든 영문자를 대문자로
+lowercase - 모든 영문자를 소문자로
+capitalize - 텍스트의 첫문자만을 대문자로
+*/
+.sidebar h2 {
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #3E2224;
+    padding: 22px;
+    font-weight: bold;
+}
+
+
+.sidebar ul li {
+    margin: 28px 0;
+    font-size: 18px;
+    text-shadow: 0px 1px 3px #aaa;
+}
+
+.sidebar ul li a {
+    color: #3E2224;
+    padding: 0 30px;
+}
+
+.sidebar ul li a:hover {
+    color: #000000;
+    margin-left: 20px;
+    transition: 0.4s;
+}
+
+/*  사이드바 끝  */
+
