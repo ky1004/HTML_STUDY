@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inputCheckbox</title>
+    <style>
+        .box{
+            display: flex;
+            justify-content: center;
+        }
+        input[id="muIcon"] {
+            display: none;
+        }
+        input[id="muIcon"] + label {
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        input[id="muIcon"] + label span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            border-radius: 30px;
+            background: #000;
+            transition: all .2s;
+        }
+        input[id="muIcon"] + label span:nth-child(1) {
+            top:0;
+        }
+        input[id="muIcon"] + label span:nth-child(2) {
+            top:50%;
+            transform: translateY(-50%);
+        }
+        input[id="muIcon"] + label span:nth-child(3) {
+            bottom:0;
+        }
+        input[id="muIcon"]:checked + label span:nth-child(1) {
+            top:50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        input[id="muIcon"]:checked + label span:nth-child(2) {
+            opacity: 0;
+        }
+        input[id="muIcon"]:checked + label span:nth-child(3) {
+            bottom:50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="checkbox" id="muIcon">
+        <label for="muIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+</body>
+</html>

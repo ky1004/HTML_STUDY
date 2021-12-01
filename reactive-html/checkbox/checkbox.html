@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+    <style>
+        input[id="chbox"] {
+            display: none;
+        }
+        input[id="chbox"] + label em {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+            background: url(img/bg_chkbox.gif) 0 0 no-repeat;
+            vertical-align: middle;
+        }
+        input[id="chbox"]:checked + label em {
+            background-position: -38px 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="chbox">
+    <label for="chbox"><em></em>체크</label>
+</body>
+</html>

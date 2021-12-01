@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pocketmonTitlePage</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            /* perspective 3d공간주기 */
+            perspective: 500px;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        @keyframes poster-ani {
+            0% {
+                transform: rotateY(-20deg);
+            }
+            100% {
+                transform: rotateY(20deg);
+            }
+        }
+        .poster{
+            position: relative;
+            width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            background-color: #fff;
+            border: 1px solid black;
+            box-shadow: 0 2px 10px gray;
+            /* linear : 일정속도, alternate : 번갈아서 이동 */
+            animation: poster-ani 1.4s infinite linear alternate;
+            transform-style: preserve-3d;
+        }
+        .poster-title{
+            padding: 1px 0;
+            font-size: 1.5rem;
+            font-family: 'Open Sans';
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            /* z좌표 이동 */
+            transform: translateZ(10px);
+        }
+        .hpcm{
+            position: absolute;
+            width: 50%;
+        }
+        .hpcm:nth-of-type(1){
+            width: 34%;
+            left: 20%;
+            bottom: 50%;
+            transform: translateZ(20px);
+        }
+        .hpcm:nth-of-type(2){
+            width: 34%;
+            left: 60%;
+            bottom: 19%;
+            transform: translateZ(30px);
+        }
+        .hpcm:nth-of-type(3){
+            width: 50%;
+            left: 8%;
+            bottom: 5%;
+            transform: translateZ(40px);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <section class="poster">
+            <h1 class="poster-title">pocketmon</h1>
+            <figure class="hpcm">
+                <img src="img/esanghesee.png">
+            </figure>
+            <figure class="hpcm">
+                <img src="img/chiyo.png">
+            </figure>
+            <figure class="hpcm">
+                <img src="img/pikachu.png">
+            </figure>
+        </section>
+    </div>
+</body>
+</html>
