@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideBar</title>
+    <style>
+        /*
+        인접요소 선택자 '+'와 position : relative,absolute,fixed,  transition 사용
+        */
+
+        .box{
+            display: flex;
+            justify-content: center;
+        }
+        input[id="menuicon"] {
+            display: none;
+        }
+        input[id="menuicon"] + label {
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        input[id="menuicon"] + label span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            border-radius: 30px;
+            background: #000;
+            transition: all .2s;
+        }
+        input[id="menuicon"] + label span:nth-child(1) {
+            top:0;
+        }
+        input[id="menuicon"] + label span:nth-child(2) {
+            top:50%;
+            transform: translateY(-50%);
+        }
+        input[id="menuicon"] + label span:nth-child(3) {
+            bottom:0;
+        }
+        input[id="menuicon"]:checked + label span:nth-child(1) {
+            top:50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        input[id="menuicon"]:checked + label span:nth-child(2) {
+            opacity: 0;
+        }
+        input[id="menuicon"]:checked + label span:nth-child(3) {
+            bottom:50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+        div[class="sidebar"] {
+            width: 300px;
+            height: 100%;
+            background: #222;
+            position: fixed;
+            top: 0;
+            right: -300px;
+            z-index: 1;
+            transition:all .35s;
+        }
+        input[id="menuicon"]:checked + label + div {
+            right: 0;
+        }
+        input[id="menuicon"] + label {
+            display: block;
+            width: 60px;
+            height: 50px;
+            position: fixed;
+            right: 0;
+            top: calc(50%, -25px);
+            transition:all .35s;
+            cursor: pointer;
+        }
+        input[id="menuicon"]:checked + label {
+            z-index: 2;
+            right: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar"></div>
+    </div>
+
+</body>
+</html>
