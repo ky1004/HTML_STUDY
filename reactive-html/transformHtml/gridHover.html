@@ -32,29 +32,12 @@
             transition: all .5s;
             z-index: 2;
         }
-        a .screen span:nth-child(1){
-            top: 0;
-            height: 5px;
-            width: 0;
-        }
-        a .screen span:nth-child(2){
-            top: 0;
-            right:0;
-            width: 5px;
-            height: 0;
-        }
-        a .screen span:nth-child(3){
-            bottom: 0;
-            right: 0px;
-            height: 5px;
-            width: 0;
-        }
-        a .screen span:nth-child(4){
-            bottom: 0;
-            left: 0;
-            width: 5px;
-            height: 0;
-        }
+        
+        a .screen span:nth-child(1){ top: 0; height: 5px; width: 0; }
+        a .screen span:nth-child(2){ top: 0; right:0; width: 5px; height: 0; }
+        a .screen span:nth-child(3){ bottom: 0; right: 0px; height: 5px; width: 0; }
+        a .screen span:nth-child(4){ bottom: 0; left: 0; width: 5px; height: 0; }
+
         a:hover .screen span:nth-child(1){ width: 100%; }
         a:hover .screen span:nth-child(2){ height: 100%; transition-delay: .5s; }
         a:hover .screen span:nth-child(3){ width: 100%; transition-delay: 1s;}
